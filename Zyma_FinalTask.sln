@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zyma_FinalTask", "Zyma_FinalTask\Zyma_FinalTask.csproj", "{552CAE01-3415-4E59-80F2-C1207310D998}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{552CAE01-3415-4E59-80F2-C1207310D998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552CAE01-3415-4E59-80F2-C1207310D998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552CAE01-3415-4E59-80F2-C1207310D998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552CAE01-3415-4E59-80F2-C1207310D998}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A350BEF-7A40-4C6A-AEA8-A76DEBF67AB3}
+	EndGlobalSection
+EndGlobal
