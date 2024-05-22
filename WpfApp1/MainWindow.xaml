@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="246" Width="536">
+    <Grid Margin="134,3,-134,-3">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Salt: " HorizontalAlignment="Left" Height="30" Margin="-55,8,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label Content="Max pass length: " HorizontalAlignment="Left" Height="30" Margin="-122,35,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label Content="Threads: " HorizontalAlignment="Left" Height="30" Margin="-77,60,0,0" VerticalAlignment="Top" Width="145"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="-16,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="23"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="-16,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="-16,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22" ToolTip="number of threads to run"/>
+        <Button x:Name="button2" Content="Try to crack" HorizontalAlignment="Left" Margin="-122,90,0,0" VerticalAlignment="Top" Width="98" Height="24" Click="Button_Click_1"/>
+        <Button x:Name="button1" Content="Generate pass" HorizontalAlignment="Left" Margin="109,12,0,0" VerticalAlignment="Top" Width="114" Height="24" Click="Button_Click"/>
+        <Label Content="Pass to crack: " HorizontalAlignment="Left" Height="30" Margin="117,36,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="SHA-256 hash: " HorizontalAlignment="Left" Height="30" Margin="110,60,0,0" VerticalAlignment="Top" Width="144"/>
+        <Label x:Name="label1" Content="_" HorizontalAlignment="Left" Height="30" Margin="196,36,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="label2" Content="_" HorizontalAlignment="Left" Height="30" Margin="196,60,0,0" VerticalAlignment="Top" Width="197"/>
+        <Label Content="Possible combinations: " HorizontalAlignment="Left" Height="30" Margin="-122,116,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Decoded password: " HorizontalAlignment="Left" Height="30" Margin="-106,137,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Elapsed time: " HorizontalAlignment="Left" Height="30" Margin="-72,158,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="labelRes1" Content="_" HorizontalAlignment="Left" Height="30" Margin="5,116,0,0" VerticalAlignment="Top" Width="211"/>
+        <Label x:Name="labelRes2" Content="_" HorizontalAlignment="Left" Height="30" Margin="5,137,0,0" VerticalAlignment="Top" Width="211"/>
+        <Label x:Name="labelRes3" Content="_" HorizontalAlignment="Left" Height="30" Margin="5,158,0,0" VerticalAlignment="Top" Width="211"/>
+        <TextBlock IsHitTestVisible="False" Text="default: '0000'" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-13,15,0,0" Foreground="DarkGray" Height="16" Width="74">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=textBox1}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBlock IsHitTestVisible="False" Text="default: 3" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-13,41,0,0" Foreground="DarkGray" Height="16" Width="49">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=textBox2}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBlock IsHitTestVisible="False" Text="default: 4" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-13,66,0,0" Foreground="DarkGray" Height="16" Width="49">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=textBox3}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+    </Grid>
+</Window>
